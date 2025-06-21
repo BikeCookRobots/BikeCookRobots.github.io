@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <title>BikeCookRobots</title>
+     <style>
+          :root {
+               --pico-font-size: 90%, --pico-font-family: Pacifico, cursive;
+          }
+     </style>
+  </head>
+  <body>
+     <nav>
+          <ul>
+               <li>
+                    <img src="images/bcrLogo1.png" style="width:128px">
+               </li>
+               <li>
+                   <a href="#"><button class="contrast">home</button></a>
+               </li>
+               <li>
+                    <a href="projects.html"><button>projects</button></a>
+               </li>
+               <li>
+                    <a href="people.html"><button>people</button></a>
+               </li>
+          </ul>
+     </nav>
+     <!-- uncomment following for top of page banner -->
+          <!-- <div>
+               <h1 style="border:3px solid green;background: brown; color: aqua;">
+                    "BIG ANNOUNCEMENT" 
+               </h1>
+          </div> -->
+    <main class="container">
+      <div id="maincontent" style="color:#fff;width:80%;margin:auto" class="">
+          
+          <div>
+               <h1 style="text-align:center;margin:auto;padding:25%">welcome, check out some of the pages above</h1>
+          </div>
+     </div>
+     <div hx-post="/nav/0" hx-trigger="load" hx-target="#maincontent" class=""></div>
+    </main>
+  </body>
+</html>
