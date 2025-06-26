@@ -12,6 +12,19 @@
             --pico-font-size: 90%, --pico-font-family: Pacifico, cursive;
         }
     </style>
+    <style>
+        .response-grid {
+             display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+
+        @media screen and (max-width: 900px) {
+
+            .response-grid{
+                grid-template-columns: 80%;
+            }
+        }
+    </style>
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
 </head>
 
