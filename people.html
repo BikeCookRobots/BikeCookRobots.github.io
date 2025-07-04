@@ -24,6 +24,55 @@
                 grid-template-columns: 80%;
             }
         }
+        :root {
+            --pico-font-size: 90%, --pico-font-family: Pacifico, cursive;
+        }
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'image desc';
+            grid-template-columns: .2fr 1fr;
+            gap: 10px;
+            margin: 0px auto 20px auto;
+            padding: 10px;
+            background-color: rgb(24, 28, 37);
+
+        }
+
+        .image-item {
+            grid-area: image;
+            max-width: 20vw;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        .text-item {
+            grid-area: desc;
+            font-size: 1.5em;
+            text-align: left;
+            flex-grow: 1;
+            margin: 10px;
+        }
+
+        @media screen and (max-width: 900px) {
+            .image-item {
+                grid-area: 1 / span 1;
+                margin: auto
+            }
+            .grid-container{
+                grid-template-columns: 1fr;
+            }
+            .text-item {
+                grid-area: 2 / span 1;
+                text-align: center;
+                margin: auto;
+            }
+        }
     </style>
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
 </head>
