@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <title>BikeCookRobots</title>
+    <style>
+        :root {
+            --pico-font-size: 90%, --pico-font-family: Pacifico, cursive;
+        }
+    </style>
+    <style>
+        .response-grid {
+             display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+
+        @media screen and (max-width: 800px) {
+
+            .response-grid{
+                grid-template-columns: 80%;
+            }
+        }
+        :root {
+            --pico-font-size: 90%, --pico-font-family: Pacifico, cursive;
+        }
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'image desc';
+            grid-template-columns: .2fr 1fr;
+            gap: 10px;
+            margin: 0px auto 20px auto;
+            padding: 10px;
+            background-color: rgb(24, 28, 37);
+
+        }
+
+        .image-item {
+            grid-area: image;
+            max-width: 20vw;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        .text-item {
+            grid-area: desc;
+            font-size: 1.5em;
+            text-align: left;
+            flex-grow: 1;
+            margin: 10px;
+        }
+
+        @media screen and (max-width: 900px) {
+            .image-item {
+                grid-area: 1 / span 1;
+                margin: auto
+            }
+            .grid-container{
+                grid-template-columns: 1fr;
+            }
+            .text-item {
+                grid-area: 2 / span 1;
+                text-align: center;
+                margin: auto;
+            }
+        }
+    </style>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src="images/bcrLogo1.png" style="width:128px">
+            </li>
+            <li>
+                <a href="index.html"><button class="contrast">home</button></a>
+            </li>
+            <li>
+                <a href="projects.html"><button>projects</button></a>
+            </li>
+            <li>
+                <a href="people.html"><button>people</button></a>
+            </li>
+        </ul>
+    </nav>
+        <div id="maincontent" style="color:#fff;width:80%;margin:auto" class="">
+            <div class="grid-container">                        <img class="image-item" src="posts/woodworking/thumb.png">                        <div class="text-item">                            <h1>Woodworking Projects</h1>                            <p>This post is a running list of some of my recent woodworking projects.  These are certainly not the prettiest, but I think Im getting better with each one.</p>                            <br><a href="/posts/woodworking/woodworking.html" class="contrast" style="float:right">read more</a>                         </div>                        </div><div class="grid-container">                        <img class="image-item" src="posts/evil-red-button/thumb.png">                        <div class="text-item">                            <h1>Building an Evil Red Button</h1>                            <p>Finally you too can have your own evil red button  for the next time some hero comes by your lair unannounced</p>                            <br><a href="/posts/evil-red-button/evil-red-button.html" class="contrast" style="float:right">read more</a>                         </div>                        </div><div class="grid-container">                        <img class="image-item" src="posts/mac-bookshelf/thumb2.png">                        <div class="text-item">                            <h1>Convert a Mac into a bookshelf with LEDs</h1>                            <p>Up cycle an old Macintosh into a bookshelf</p>                            <br><a href="/posts/mac-bookshelf/mac-bookshelf.html" class="contrast" style="float:right">read more</a>                         </div>                        </div><div class="grid-container">                        <img class="image-item" src="posts/login-microcontroller/thumb.png">                        <div class="text-item">                            <h1>Turn on your PC over WiFi</h1>                            <p>This project shows how you can both power on your PC and log into it remotely using a Raspberry Pi Pico W and MQTT</p>                            <br><a href="/posts/login-microcontroller/login-microcontroller.html" class="contrast" style="float:right">read more</a>                         </div>                        </div><div class="grid-container">                        <img class="image-item" src="posts/subwoofer/thumb.png">                        <div class="text-item">                            <h1>Basic subwoofer build</h1>                            <p>Building a subwoofer is an simple introduction project to woodworking and electrical work. Doesn't change how bad of job I did</p>                            <br><a href="/posts/subwoofer/subwoofer.html" class="contrast" style="float:right">read more</a>                         </div>                        </div>
+        </div>
+</body>
+
+</html>

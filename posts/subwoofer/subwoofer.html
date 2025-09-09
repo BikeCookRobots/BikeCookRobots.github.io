@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../../css/pico.min.css">
+    <title>BikeCookRobots</title>
+    <style>
+        :root {
+            --pico-font-size: 90%, --pico-font-family: Pacifico, cursive;
+        }
+    </style>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src="../../images/bcrLogo1.png" style="width:128px">
+            </li>
+            <li>
+                <a href="../../index.html"><button class="contrast">home</button></a>
+            </li>
+            <li>
+                <a href="../../projects.html"><button>projects</button></a>
+            </li>
+            <li>
+                <a href="../../people.html"><button>people</button></a>
+            </li>
+        </ul>
+    </nav>
+        <div id="maincontent" style="color:#fff;width:50%;margin:auto" class="">
+            <md-block># Basic subwoofer build  
+*Last updated: 2025-06-08*  
+*[video](https://www.youtube.com/watch?v=4XGFziZye8Q)*
+
+---
+Building a subwoofer is a pretty basic woodworking and electrical project. The components can get expensive if you start falling into the audiophile rabbit hole. Its possible to make something decent for not much money, though. The basic parts you need are the driver (aka, the speaker part), an amplifier, optionally a vent (the tube you sometimes see), and material to make the case. I had an old subwoofer driver that I pulled from a recycling bin. But I found that it was busted (see video linked above for more details). Luckily I had another driver.
+
+![](asd02.png)
+
+When it comes to making the enclosure, you can't arbitrarily decide on dimensions. The internal volume of speaker is determined by the Thiele-Small parameters or T/S parameters of the driver. These are a set of numbers that give electromechanical description of the driver [1](https://en.wikipedia.org/wiki/Thiele/Small_parameters "Thiele/Small parameters"). If you buy your drivers new, these values will often be listed by the manufacturer. You can use a program called winISD to plug in the parameters of your driver and whether you want a vent or not. This will calculate what the internal volume of the cabinet should be. You then get to decide how you achieve that volume.
+
+![](asd03.png)  
+
+![winISD](subwoofer/asd04.png)
+
+What you see in the video is probably not how you should you put together a box. I used a nail gun and just about every nail blew out the side. I am still developing my woodworking skills. However you do it, you should end up with a box the right size. Put a couple of holes in it to add the driver and the amplifier (if you are using one that goes in the case) and finish it however you like. 
+
+![](asd01.png)   </md-block>
+        </div>
+</body>
+
+</html>

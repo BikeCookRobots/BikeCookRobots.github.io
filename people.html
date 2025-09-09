@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <title>BikeCookRobots</title>
+    <style>
+        :root {
+            --pico-font-size: 90%, --pico-font-family: Pacifico, cursive;
+        }
+    </style>
+    <style>
+        .response-grid {
+             display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+
+        @media screen and (max-width: 800px) {
+
+            .response-grid{
+                grid-template-columns: 80%;
+            }
+        }
+        :root {
+            --pico-font-size: 90%, --pico-font-family: Pacifico, cursive;
+        }
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'image desc';
+            grid-template-columns: .2fr 1fr;
+            gap: 10px;
+            margin: 0px auto 20px auto;
+            padding: 10px;
+            background-color: rgb(24, 28, 37);
+
+        }
+
+        .image-item {
+            grid-area: image;
+            max-width: 20vw;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        .text-item {
+            grid-area: desc;
+            font-size: 1.5em;
+            text-align: left;
+            flex-grow: 1;
+            margin: 10px;
+        }
+
+        @media screen and (max-width: 900px) {
+            .image-item {
+                grid-area: 1 / span 1;
+                margin: auto
+            }
+            .grid-container{
+                grid-template-columns: 1fr;
+            }
+            .text-item {
+                grid-area: 2 / span 1;
+                text-align: center;
+                margin: auto;
+            }
+        }
+    </style>
+    <style>
+        .response-grid {
+             display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+
+        @media screen and (max-width: 800px) {
+
+            .response-grid{
+                grid-template-columns: 80%;
+            }
+        }
+        :root {
+            --pico-font-size: 90%, --pico-font-family: Pacifico, cursive;
+        }
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'image desc';
+            grid-template-columns: .2fr 1fr;
+            gap: 10px;
+            margin: 0px auto 20px auto;
+            padding: 10px;
+            background-color: rgb(24, 28, 37);
+
+        }
+
+        .image-item {
+            grid-area: image;
+            max-width: 20vw;
+            min-width: 300px;
+            margin: 10px;
+        }
+
+        .text-item {
+            grid-area: desc;
+            font-size: 1.5em;
+            text-align: left;
+            flex-grow: 1;
+            margin: 10px;
+        }
+
+        @media screen and (max-width: 900px) {
+            .image-item {
+                grid-area: 1 / span 1;
+                margin: auto
+            }
+            .grid-container{
+                grid-template-columns: 1fr;
+            }
+            .text-item {
+                grid-area: 2 / span 1;
+                text-align: center;
+                margin: auto;
+            }
+        }
+    </style>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src="images/bcrLogo1.png" style="width:128px">
+            </li>
+            <li>
+                <a href="index.html"><button class="contrast">home</button></a>
+            </li>
+            <li>
+                <a href="projects.html"><button>projects</button></a>
+            </li>
+            <li>
+                <a href="people.html"><button>people</button></a>
+            </li>
+        </ul>
+    </nav>
+        <div id="maincontent" style="color:#fff;width:80%;margin:auto" class="">
+            <h2>some people you should check out</h2>            <div class="response-grid" ><Div style="width:100%;margin:25px 0px 25px 0px">            <Img src="people/loganH.png" style="width:100%;height:auto;align:center" />            <h1 style="text-align:center">Logan Hart </h1>            <p style="text-align:center;font-size:1.6em;">Creates all sorts of compositions, including video game soundtracks </p>            <a href="http://www.instagram.com/loganhartbeat/" class="contrast" target="_blank" style="float:right">link</a>                </div><Div style="width:100%;margin:25px 0px 25px 0px">            <Img src="people/ahmsville.png" style="width:100%;height:auto;align:center" />            <h1 style="text-align:center">Ahmsville Labs </h1>            <p style="text-align:center;font-size:1.6em;">Created a very cool space mouse </p>            <a href="http://www.youtube.com/@AhmsvilleLabs" class="contrast" target="_blank" style="float:right">link</a>                </div><Div style="width:100%;margin:25px 0px 25px 0px">            <Img src="people/bruceW.png" style="width:100%;height:auto;align:center" />            <h1 style="text-align:center">Bruce Winter </h1>            <p style="text-align:center;font-size:1.6em;">Smart home enthusiast and a big inspiration for me </p>            <a href="http://www.youtube.com/@BruceWinter" class="contrast" target="_blank" style="float:right">link</a>                </div><Div style="width:100%;margin:25px 0px 25px 0px">            <Img src="people/juxtopposed.png" style="width:100%;height:auto;align:center" />            <h1 style="text-align:center">Juxtopposed </h1>            <p style="text-align:center;font-size:1.6em;">Redesigning the UI of seemingly every app as well as creating great UI design tools </p>            <a href="http://www.youtube.com/@juxtopposed" class="contrast" target="_blank" style="float:right">link</a>                </div><Div style="width:100%;margin:25px 0px 25px 0px">            <Img src="people/cjx.png" style="width:100%;height:auto;align:center" />            <h1 style="text-align:center">CJ The X </h1>            <p style="text-align:center;font-size:1.6em;">Creator of fantastic essays on art </p>            <a href="http://www.youtube.com/@cjthex" class="contrast" target="_blank" style="float:right">link</a>                </div><Div style="width:100%;margin:25px 0px 25px 0px">            <Img src="people/posy.png" style="width:100%;height:auto;align:center" />            <h1 style="text-align:center">Posy </h1>            <p style="text-align:center;font-size:1.6em;">Making some of the most authentic and beautiful videos out there </p>            <a href="http://www.youtube.com/@PosyMusic" class="contrast" target="_blank" style="float:right">link</a>                </div><Div style="width:100%;margin:25px 0px 25px 0px">            <Img src="people/kendraG.png" style="width:100%;height:auto;align:center" />            <h1 style="text-align:center">Kendra Gaylord </h1>            <p style="text-align:center;font-size:1.6em;">Discusses architecture and how it relates to our modern culture </p>            <a href="http://www.youtube.com/@kendragaylord" class="contrast" target="_blank" style="float:right">link</a>                </div><Div style="width:100%;margin:25px 0px 25px 0px">            <Img src="people/ethanC.png" style="width:100%;height:auto;align:center" />            <h1 style="text-align:center">Ethan Chlebowski </h1>            <p style="text-align:center;font-size:1.6em;">Makes excellent videos about testing food techniques and explaining concepts in a scientific way </p>            <a href="http://www.youtube.com/@EthanChlebowski" class="contrast" target="_blank" style="float:right">link</a>                </div><Div style="width:100%;margin:25px 0px 25px 0px">            <Img src="people/camS.png" style="width:100%;height:auto;align:center" />            <h1 style="text-align:center">Cam Shand </h1>            <p style="text-align:center;font-size:1.6em;">Maker with a pretty sweet desk and every cool tool there is </p>            <a href="http://www.youtube.com/@camshand" class="contrast" target="_blank" style="float:right">link</a>                </div><Div style="width:100%;margin:25px 0px 25px 0px">            <Img src="people/stevenB.png" style="width:100%;height:auto;align:center" />            <h1 style="text-align:center">Steven Bennett </h1>            <p style="text-align:center;font-size:1.6em;">Building the Open Task Light project </p>            <a href="http://www.youtube.com/@StevenBennettMakes" class="contrast" target="_blank" style="float:right">link</a>                </div><Div style="width:100%;margin:25px 0px 25px 0px">            <Img src="people/mattKC.png" style="width:100%;height:auto;align:center" />            <h1 style="text-align:center">MattKC </h1>            <p style="text-align:center;font-size:1.6em;">Covers topics related video game reverse engineering and console mods </p>            <a href="http://www.youtube.com/@MattKC" class="contrast" target="_blank" style="float:right">link</a>                </div><Div style="width:100%;margin:25px 0px 25px 0px">            <Img src="people/nbp.png" style="width:100%;height:auto;align:center" />            <h1 style="text-align:center">No Boilerplate </h1>            <p style="text-align:center;font-size:1.6em;">I like their excellent videos about improving your computing habbits. Keeps making me want to try Rust  </p>            <a href="http://www.youtube.com/@NoBoilerplate" class="contrast" target="_blank" style="float:right">link</a>                </div></div>
+        </div>
+</body>
+
+</html>

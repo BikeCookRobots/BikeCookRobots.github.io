@@ -1,0 +1,37 @@
+<data>
+    <post>
+		<name>woodworking</name>
+		<title>Woodworking Projects</title>
+		<thumb>thumb.png</thumb>
+		<preview>preview.md</preview>
+		<article>article.md</article>
+    </post>
+    <post>
+		<name>evil-red-button</name>
+		<title>Building an Evil Red Button</title>
+		<thumb>thumb.png</thumb>
+		<preview>preview.md</preview>
+		<article>article.md</article>
+    </post>
+	<post>
+		<name>mac-bookshelf</name>
+		<title>Convert a Mac into a bookshelf with LEDs</title>
+		<thumb>thumb2.png</thumb>
+		<preview>preview.md</preview>
+		<article>article.md</article>
+    </post>
+	<post>
+		<name>login-microcontroller</name>
+		<title>Turn on your PC over WiFi</title>
+		<thumb>thumb.png</thumb>
+		<preview>preview.md</preview>
+		<article>article.md</article>
+    </post>
+	<post>
+		<name>subwoofer</name>
+		<title>Basic subwoofer build</title>
+		<thumb>thumb.png</thumb>
+		<preview>preview.md</preview>
+		<article>article.md</article>
+    </post>
+</data>

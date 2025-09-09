@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../../css/pico.min.css">
+    <title>BikeCookRobots</title>
+    <style>
+        :root {
+            --pico-font-size: 90%, --pico-font-family: Pacifico, cursive;
+        }
+    </style>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src="../../images/bcrLogo1.png" style="width:128px">
+            </li>
+            <li>
+                <a href="../../index.html"><button class="contrast">home</button></a>
+            </li>
+            <li>
+                <a href="../../projects.html"><button>projects</button></a>
+            </li>
+            <li>
+                <a href="../../people.html"><button>people</button></a>
+            </li>
+        </ul>
+    </nav>
+        <div id="maincontent" style="color:#fff;width:50%;margin:auto" class="">
+            <md-block># Log into your PC over WiFi
+*last updated: 2025-05-30*  
+*[video](https://youtu.be/_snGpobyG0U), [github repo](https://github.com/BikeCookRobots/login-microcontroller)*  
+
+---
+This is a project that allows you to boot up and log into your PC from your phone. Turning on your PC remotely can be achieved with Wake-On-LAN (WOL) however not all motherboards support that and you must have an ethernet connection [1](javascript:; "As far as I can tell. I believe there is a wireless WOL but I have never gotten that to work."). Even then, you would still be stuck at the login screen. This project acts as a virtual button for your power button and as a virtual keyboard to send the password as if you were sitting there. 
+
+![](asd01.png)
+It is based around the Raspberry Pi Pico W but any wireless microcontroller that is capable of emulating HID devices should work. The pi needs to be connected to a USB port on the computer, either internal or external. I recommend connecting to an internal header because you need to access the power button headers located in the machine. I didn't know it when I built this that you can buy micro-usb to usb header adapters, and that is probably quicker and easier than making a custom one like i did. The power button header is plugged into the device and then the two wires off the device plug into the power button connector on the motherboard. This will create a sort of "y splitter" for the power button, so that we can use either the case button or the login controller. 
+![](asd02.png)
+
+The program first starts by subscribing to an mqtt topic; i call it the command topic. When the pi receives the correct command, it will turn on a digital signal for 1 second, which "turns on" the transistor. The transistor legs are connected to the two legs of the button leads, and so we simulate a button press. The controller waits some amount of time (you would make this delay larger if you have slow booting computer.) then sends a keystroke to dismiss the lock screen, then inputs the password as if it was a keyboard, then presses enter.  
+
+
+The security risks of this are not lost on me. If someone were to access you PC and knew this device was in you computer, they could pull it out and get the password. However, if someone is accessing your PC in person, you can assume it has been compromised. We can mitigate this somewhat by adding some code to the `boot.py` file that disables usb mass storage unless a button is pressed at boot up time. 
+
+```python
+if button.value:
+    storage.disable_usb_drive()
+```
+ As always, your security risk tolerance is your decision.
+ </md-block>
+        </div>
+</body>
+
+</html>

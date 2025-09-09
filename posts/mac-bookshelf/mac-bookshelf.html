@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../../css/pico.min.css">
+    <title>BikeCookRobots</title>
+    <style>
+        :root {
+            --pico-font-size: 90%, --pico-font-family: Pacifico, cursive;
+        }
+    </style>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src="../../images/bcrLogo1.png" style="width:128px">
+            </li>
+            <li>
+                <a href="../../index.html"><button class="contrast">home</button></a>
+            </li>
+            <li>
+                <a href="../../projects.html"><button>projects</button></a>
+            </li>
+            <li>
+                <a href="../../people.html"><button>people</button></a>
+            </li>
+        </ul>
+    </nav>
+        <div id="maincontent" style="color:#fff;width:50%;margin:auto" class="">
+            <md-block># Convert Mac into a bookshelf with LEDs  
+*last updated: 2025-06-08*  
+*[video](https://youtu.be/CZHXdVfnOrI)*  
+
+---
+The Apple Power Mac G5 incidentally makes a very good bookshelf. Originally, I wanted to use it as a PC case and put standard ATX components in there. However, when I garbage picked this, I was in college and dint have nearly the skills I have now to mod it [1](javascript:; "which doesn't say much"). I instead decided to turn it into a bookshelf with a string of white LEDs outlining the inside of it. Originally, it was controlled with a switch in line with the DC input. Back then, though, I imagined how cool it would be if the power button controlled the state of the lights. 
+
+![](thumb2.png)
+
+Recently I accomplished that. The circuit shown bellow was borrowed from a video i saw about using the 555 chip in interesting ways. With the flip flop circuit i was able to toggle the signal going to the base of a transistor and thus toggle the state of the lights.
+
+![](asd01.png) </md-block>
+        </div>
+</body>
+
+</html>
