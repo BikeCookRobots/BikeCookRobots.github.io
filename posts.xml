@@ -1,5 +1,12 @@
 <data>
     <post>
+		<name>dodecadeck</name>
+		<title>Dodecadeck Macropad</title>
+		<thumb>thumb.png</thumb>
+		<preview>preview.md</preview>
+		<article>article.md</article>
+    </post>
+    <post>
 		<name>woodworking</name>
 		<title>Woodworking Projects</title>
 		<thumb>thumb.png</thumb>
