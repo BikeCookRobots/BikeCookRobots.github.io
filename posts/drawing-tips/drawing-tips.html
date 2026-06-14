@@ -7,22 +7,81 @@
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="../../css/pico.min.css">
     <title>BikeCookRobots</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg">
     <style>
         :root {
             --pico-font-size: 90%, --pico-font-family: Pacifico, cursive;
+        }
+        .md-content {
+            width: 50%
+        }
+
+        .only-on-dark {
+            display: none;
+        }
+
+        .only-on-light {
+            display: block;
+        }
+
+
+        @media (prefers-color-scheme: dark) {
+            .only-on-dark {
+                display: block;
+            }
+
+            .only-on-light {
+                display: none;
+            }
+        }
+        @media screen and (max-width: 800px) {
+
+            .md-content {
+                width: 80%;
+            }
+
+            .mobile-only {
+                display: inline;
+            }
+
+            .desk-only {
+                display: none
+            }
+            .nav-list {
+                margin: auto;
+            }
+        }
+
+        @media screen and (min-width: 801px) {
+            .mobile-only {
+                display: none
+            }
+            .desk-only {
+                display: inline
+            }
+            .nav-list {
+                margin: 1% auto 1% 1% ;
+            }
         }
     </style>
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
 </head>
 
 <body>
-    <nav>
-        <ul>
+    <div class="mobile-only">
+        <img class="only-on-dark" src="../../images/bcrLogo1_w.png" style="margin:auto; width:250px ">
+        <img class="only-on-light" src="../../images/bcrLogo1_b.png" style="margin:auto; width:250px ">
+    </div>
+    <nav class="nav-list">
+        <ul style="margin: inherit;">
             <li>
-                <img src="../../images/bcrLogo1.png" style="width:128px">
+                <div class="desk-only">
+                    <img class="only-on-dark" src="../../images/bcrLogo1_w.png" style="width:200px">
+                    <img class="only-on-light" src="../../images/bcrLogo1_b.png" style="width:200px">
+                </div>
             </li>
             <li>
-                <a href="../../index.html"><button class="contrast">home</button></a>
+                <a href="../../index.html"><button>home</button></a>
             </li>
             <li>
                 <a href="../../projects.html"><button>projects</button></a>
@@ -32,7 +91,7 @@
             </li>
         </ul>
     </nav>
-        <div id="maincontent" style="color:#fff;width:50%;margin:auto" class="">
+        <div id="maincontent" style="color:#fff;margin:auto" class="md-content">
             <md-block># Tips for "Drawing on the Right Side of the Brain"
 *last updated: 2026-03-12*  
 *[video](https://youtu.be/av7S6tB_zKY)*

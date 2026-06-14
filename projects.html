@@ -7,46 +7,44 @@
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="css/pico.min.css">
     <title>BikeCookRobots</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg">
     <style>
         :root {
             --pico-font-size: 90%, --pico-font-family: Pacifico, cursive;
         }
-    </style>
-    <style>
+
         .response-grid {
-             display: grid;
+            display: grid;
             grid-template-columns: 25% 25% 25% 25%;
         }
 
-        @media screen and (max-width: 800px) {
+        .only-on-dark {
+            display: none;
+        }
 
-            .response-grid{
-                grid-template-columns: 80%;
-            }
-        }
-        :root {
-            --pico-font-size: 90%, --pico-font-family: Pacifico, cursive;
-        }
-        * {
-            margin: 0;
-            box-sizing: border-box;
+        .only-on-light {
+            display: block;
         }
 
         .grid-container {
             display: grid;
             grid-template-areas:
                 'image desc';
-            grid-template-columns: .2fr 1fr;
+            grid-template-columns: .2fr .8fr;
             gap: 10px;
             margin: 0px auto 20px auto;
             padding: 10px;
-            background-color: rgb(24, 28, 37);
+            background-color: light-dark(rgb(236, 236, 238), rgb(24, 28, 37));
 
+        }
+
+        .grid-item{
+            margin: 0px 10px 25px 10px;
         }
 
         .image-item {
             grid-area: image;
-            max-width: 20vw;
+            max-width: 20fr;
             min-width: 300px;
             margin: 10px;
         }
@@ -55,22 +53,55 @@
             grid-area: desc;
             font-size: 1.5em;
             text-align: left;
-            flex-grow: 1;
-            margin: 10px;
+            margin: 20px
         }
 
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 800px) {
+            .response-grid {
+                grid-template-columns: 100%;
+            }
+            .mobile-only {
+                display: inline;
+            }
+
+            .desk-only {
+                display: none
+            }
+            .nav-list {
+                margin: auto;
+            }
             .image-item {
                 grid-area: 1 / span 1;
                 margin: auto
-            }
-            .grid-container{
-                grid-template-columns: 1fr;
             }
             .text-item {
                 grid-area: 2 / span 1;
                 text-align: center;
                 margin: auto;
+            }
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media screen and (min-width: 801px) {
+            .mobile-only {
+                display: none
+            }
+            .desk-only {
+                display: inline
+            }
+            .nav-list {
+                margin: 1% auto 1% 1% ;
+            }
+        }
+        @media (prefers-color-scheme: dark) {
+            .only-on-dark {
+                display: block;
+            }
+
+            .only-on-light {
+                display: none;
             }
         }
     </style>
@@ -78,13 +109,20 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
+    <div class="mobile-only">
+        <img class="only-on-dark" src="images/bcrLogo1_w.png" style="margin:auto; width:250px ">
+        <img class="only-on-light" src="images/bcrLogo1_b.png" style="margin:auto; width:250px ">
+    </div>
+    <nav class="nav-list">
+        <ul style="margin: inherit;">
             <li>
-                <img src="images/bcrLogo1.png" style="width:128px">
+                <div class="desk-only">
+                    <img class="only-on-dark" src="images/bcrLogo1_w.png" style="width:200px">
+                    <img class="only-on-light" src="images/bcrLogo1_b.png" style="width:200px">
+                </div>
             </li>
             <li>
-                <a href="index.html"><button class="contrast">home</button></a>
+                <a href="index.html"><button>home</button></a>
             </li>
             <li>
                 <a href="projects.html"><button>projects</button></a>
