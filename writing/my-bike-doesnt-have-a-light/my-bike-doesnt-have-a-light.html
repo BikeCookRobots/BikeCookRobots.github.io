@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="../../css/pico.min.css">
+    <title>BikeCookRobots</title>
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.svg">
+    <style>
+        :root {
+            --pico-font-size: 90%, --pico-font-family: Pacifico, cursive;
+        }
+        .md-content {
+            width: 50%
+        }
+
+        .only-on-dark {
+            display: none;
+        }
+
+        .only-on-light {
+            display: block;
+        }
+
+
+        @media (prefers-color-scheme: dark) {
+            .only-on-dark {
+                display: block;
+            }
+
+            .only-on-light {
+                display: none;
+            }
+        }
+        @media screen and (max-width: 800px) {
+
+            .md-content {
+                width: 80%;
+            }
+
+            .mobile-only {
+                display: inline;
+            }
+
+            .desk-only {
+                display: none
+            }
+            .nav-list {
+                margin: auto;
+            }
+        }
+
+        @media screen and (min-width: 801px) {
+            .mobile-only {
+                display: none
+            }
+            .desk-only {
+                display: inline
+            }
+            .nav-list {
+                margin: 1% auto 1% 1% ;
+            }
+        }
+    </style>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+</head>
+
+<body>
+    <div class="mobile-only">
+        <img class="only-on-dark" src="../../images/bcrLogo1_w.png" style="margin:auto; width:250px ">
+        <img class="only-on-light" src="../../images/bcrLogo1_b.png" style="margin:auto; width:250px ">
+    </div>
+    <nav class="nav-list">
+        <ul style="margin: inherit;">
+            <li>
+                <div class="desk-only">
+                    <img class="only-on-dark" src="../../images/bcrLogo1_w.png" style="width:200px">
+                    <img class="only-on-light" src="../../images/bcrLogo1_b.png" style="width:200px">
+                </div>
+            </li>
+            <li>
+                <a href="../../index.html"><button>home</button></a>
+            </li>
+            <li>
+                <a href="../../projects.html"><button>projects</button></a>
+            </li>
+            <li>
+                <a href="../../writing.html"><button>writing</button></a>
+            </li>
+            <li>
+                <a href="../../people.html"><button>people</button></a>
+            </li>
+        </ul>
+    </nav>
+        <div id="maincontent" style="color:#fff;margin:auto" class="md-content">
+            <md-block>Well, I do have a light but its broken and I have a lot of feelings on it.
+
+This light was given to me by a friend that also rides bikes and was concerned for me riding at night. And while it was a thoughtful gesture and I appreciated it very much, its not the light I would have selected. I hadn't asked for it and I hadn't researched one at all. Really the biggest problem I have with it is that it charges with micro USB. I don't like thinking about my feelings on it because it makes me seem ungrateful. It’s a gift, I shouldn't critique it. And what does it matter what cable I'm using? It’s a little annoying to bring an extra cable if I'm taking my bike somewhere, but that's it. I'm upset with myself that I have this urge for things to be "perfect" and that little deviations from that annoy me.
+
+That didn't stop me from using it, it just lingered in the back of my mind. Now, after not many hours of using it, the battery is dead. A whole new set of feelings. I hate manufactured garbage. I hate things that break too easily. The world is using untold tonnes of materials and kilowatts to manufacture, package and ship crappy products. And by possessing this broken light, I feel responsible for supporting some manufacturer building non-quality products. I have buyer's remorse for something I didn't buy. 
+
+I'm going to fix it rather than throw it away. I need to crack it open, find out what sort of battery it uses and see if I cant replace the charging port somehow. This makes me wonder "how is this going to come apart?" "where are the clips located?" "am I going to damage the battery?" "is it still going to be water resistant when I'm done?" "am I better off just making a new one from scratch?" This isn't stressful but it takes mental bandwidth. 
+
+I don't think these are the questions most people ask themselves when facing a broken object. I don't think most people ask how long their stuff will last. I don't think most people ask if this is the best version of a thing that can be bought. Many do; but most don’t.
+
+Certainly compromises to quality can be reasonably made; I wont tell anyone they need to get a $50 bike light even if it works forever and ever. But it should be considered if you care about quality and making the most of our resources.
+
+I suppose this post is just me staking my flag, trying to advance the "buy it for life" mentality and encourage more thoughtful consumerism
+
+ </md-block>
+        </div>
+</body>
+
+</html>
